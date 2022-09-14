@@ -1,9 +1,8 @@
 # charged_particle_simulation_project
 
-Tips:
-- Give your files clear names with no spaces (feel free to uses underscores)
-- Remember to comment you code clearly, this will help others read it and help remind you of what sections do.
-- Write your code in a consistant style.
+A charged particle simulation created as part of a third year project at university.
+
+This is some of my most commented code as it was done as part of a group project thus, this was code that I shared with my peers.
 
 Files:
 - particles.py: Contains all the functions relating to the generation and manipulation of particles.
