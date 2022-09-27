@@ -72,7 +72,15 @@ def motion_range_kutta(parti:np.ndarray,dt:float,t:float,func_E:callable,func_B:
     return parti
 
 def motion_boris(parti:np.ndarray,dt:float,e_field:np.ndarray,m_field:np.ndarray,*,collisional:bool=False,thresh:float=0.5):
+    '''Move a charged particle in an electric field and magnetic field
 
+    Takes in an instantanious electric field (e_field) and a list of charged particles (parti) and calculates their motion for a small time step.
+
+    parti: A list of particles in the electric field, contains infomation about current position, velocity, charge and mass
+    dt: The time step by which the simulation has been advanced
+    e_field: A vector representing the electric field at that position
+    m_field: A vector representing the magnetic field at that position
+    '''
     #calculate v minus
     v_minus = parti[:,3:6]+((parti[:,7,np.newaxis]/parti[:,8,np.newaxis])*e_field*(dt/2))
 
